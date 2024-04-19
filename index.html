@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Vitória cardápio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oswald:wght@300&family=Roboto:ital,wght@1,100;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Quicksand);
+      body{
+        margin: 0;
+        padding: 0;
+        background: #7ea301;
+        font-family: 'Quicksand', sans-serif;
+      }
+      .card{
+        position: absolute;
+        left: 50%;
+        width: 300px;
+        height: 428px;
+        background: #fff;
+        transform-style: preserve-3d;
+        transform: translate(-50%, 50%) perspective(2000px);
+        box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 20px 100px rgba(0, 0, 0, .5);
+        transition: 1s;
+      }
+      .card:hover{
+        transform: translate(-50%, 50%) perspective(2000px);
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0,.5) 0 20px 100px rgba(0, 0, 0, .5);
+      }
+      .card:before{
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: 5px;
+        width:100%;
+        height: 5px;
+        transform-origin: bottom;
+        transform: skewX(-45deg)
+      }
+     .card:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -5px;
+      height: 100%;
+      width: 5px;
+      background-color: #7ea301;
+      transform-origin: left;
+      transform: skewY(-45deg)
+     }
+     .card .imgbox{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-origin:left;
+      transition: 1s;
+     }
+     .card:hover .imgbox{
+      transform: rotateY(-135deg);
+     }
+     .card .detalhes{
+      position:absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      padding:20px;
+      z-index: -1;
+     }
+
+     .imgbox{
+        height: 200px !important;
+     }
+
+    </style>
+
+    <div class="card">
+      <div class="imgbox">
+        <img src="https://marketplace.canva.com/EAE4oJOnMh0/1/0/1003w/canva-capa-de-livro-de-suspense-O7z4yw4a5k8.jpg" width="300" height="425" />
+      </div>
+      <div class="detalhes">
+        <h2>Canal: Codigo fonte</h2>
+        <p>
+          industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unk
+          nown printer took a galley of type and scrambled it to make a type specimen book. It has survived no
+          t only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It wa
+          s popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and mo
+          re recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
+
